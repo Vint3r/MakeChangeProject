@@ -37,19 +37,20 @@ public class MakeChangeApp {
 
 				if (convertOwed > convertPaid) {
 					amountMore = amountOwed - amountPaid;
-					System.out.printf("You paid $%.2f you need to pay $%.2f more to buy everything.\n", amountPaid, amountMore);
+					System.out.printf("You paid $%.2f you need to pay $%.2f more to buy everything.\n", amountPaid,
+							amountMore);
 				} else if (convertOwed == convertPaid) {
 					System.out.println("Thank you, you paid the exact amount!");
 					amountOwed = 0;
 					amountPaid = 0;
-					convertOwed = 0; 
+					convertOwed = 0;
 					convertPaid = 0;
 				} else {
 					String changeBack = getChange(convertOwed, convertPaid);
 					System.out.println("Your change back is: " + changeBack);
 					amountOwed = 0;
 					amountPaid = 0;
-					convertOwed = 0; 
+					convertOwed = 0;
 					convertPaid = 0;
 				}
 				continue;
