@@ -28,6 +28,7 @@ public class MakeChangeApp {
 				continue;
 			case "pay":
 			case "2":
+			case "two":
 				amountMore = amountOwed - amountPaid;
 				System.out.println("How much will you tender? Your current balance due is $" + amountMore);
 				amountPaid = input.nextDouble();
@@ -52,6 +53,7 @@ public class MakeChangeApp {
 					convertPaid = 0;
 				}
 				continue;
+			case "three":
 			case "3":
 			case "quit":
 			case "cancel":
