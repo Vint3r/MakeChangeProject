@@ -22,15 +22,15 @@ public class MakeChangeApp {
 			case "add":
 			case "1":
 			case "one":
-				System.out.println("How much is the item, your current balance due is: $" + amountOwed);
+				System.out.printf("How much is the item, your current balance due is: $%.2f \n", amountOwed);
 				amountOwed += input.nextDouble();
-				System.out.println("Thank you, your new balance due is: $" + amountOwed);
+				System.out.printf("Thank you, your new balance due is: $%.2f \n", amountOwed);
 				continue;
 			case "pay":
 			case "2":
 			case "two":
 				amountMore = amountOwed - amountPaid;
-				System.out.println("How much will you tender? Your current balance due is $" + amountMore);
+				System.out.printf("How much will you tender? Your current balance due is $%.2f \n", amountMore);
 				amountPaid = input.nextDouble();
 				convertOwed = (int) (amountOwed * 100);
 				convertPaid += (int) (amountPaid * 100);
