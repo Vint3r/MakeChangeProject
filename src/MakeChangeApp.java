@@ -81,32 +81,41 @@ public class MakeChangeApp {
 	public static String getChange(int amountOwed, int amountPaid) {
 		int totalChange = amountPaid - amountOwed;
 		String changeBack = "";
+		int amount = 0;
 
 		while (totalChange != 0) {
 			if (totalChange >= 2000) {
-				totalChange -= 2000;
-				changeBack += "A 20 dollar bill,";
+				amount = totalChange / 2000;
+				totalChange -= 2000 * amount;
+				changeBack += amount + " 20 dollar bill(s), ";
 			} else if (totalChange >= 1000) {
-				totalChange -= 1000;
-				changeBack += " a 10 dollar bill,";
+				amount = totalChange / 1000;
+				totalChange -= 1000 * amount;
+				changeBack += amount + " 10 dollar bill(s), ";
 			} else if (totalChange >= 500) {
-				totalChange -= 500;
-				changeBack += " a 5 dollar bill,";
+				amount = totalChange / 500;
+				totalChange -= 500 * amount;
+				changeBack += amount + " 5 dollar bill(s), ";
 			} else if (totalChange >= 100) {
-				totalChange -= 100;
-				changeBack += " a 1 dollar bill,";
+				amount = totalChange / 100;
+				totalChange -= 100 * amount;
+				changeBack += amount + " 1 dollar bill(s), ";
 			} else if (totalChange >= 25) {
-				totalChange -= 25;
-				changeBack += " a quarter,";
+				amount = totalChange / 25;
+				totalChange -= 25 * amount;
+				changeBack += amount + " quarter(s), ";
 			} else if (totalChange >= 10) {
-				totalChange -= 10;
-				changeBack += " a dime,";
+				amount = totalChange / 10;
+				totalChange -= 10 * amount;
+				changeBack += amount + " dime(s), ";
 			} else if (totalChange >= 5) {
-				totalChange -= 5;
-				changeBack += " a nickel,";
+				amount = totalChange / 5;
+				totalChange -= 5 * amount;
+				changeBack += amount + " nickel(s), ";
 			} else {
-				totalChange -= 1;
-				changeBack += " a penny,";
+				amount = totalChange / 1;
+				totalChange -= 1 * amount;
+				changeBack += amount + " penny(s).";
 			}
 		}
 		return changeBack;
